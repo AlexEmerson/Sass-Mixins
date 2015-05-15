@@ -21,7 +21,7 @@
 	$prefix: '-' + $mode + '-';
 
 	// Get angles
-	$angles: helper-gradient-angle('' + nth($gradient, 2));
+	$angles: helper-gradient-angle(nth($gradient, 2));
 	$angle: nth($angles, 1);
 
 	// If unprefixed

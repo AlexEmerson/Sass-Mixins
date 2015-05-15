@@ -4,7 +4,7 @@
 
 @function angle ($deg) {
 	@if type-of($deg) == 'number' {
-		@return mod(abs($deg - 450), 360deg);
+		@return abs($deg - 450)%360,;
 	} @else {
 		$position: to + " ";
 		@each $pos in $deg {

@@ -461,7 +461,7 @@
 
 @function angle ($deg) {
 	@if type-of($deg) == 'number' {
-		@return mod(abs($deg - 450), 360deg);
+		@return abs($deg - 450)%360;
 	} @else {
 		$position: to + " ";
 		@each $pos in $deg {
@@ -574,7 +574,7 @@
 	$prefix: '-' + $mode + '-';
 
 	// Get angles
-	$angles: helper-gradient-angle('' + nth($gradient, 2));
+	$angles: helper-gradient-angle(nth($gradient, 2));
 	$angle: nth($angles, 1);
 
 	// If unprefixed
